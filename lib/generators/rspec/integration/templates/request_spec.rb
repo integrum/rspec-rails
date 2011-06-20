@@ -1,15 +1,9 @@
 require 'spec_helper'
 
-describe "<%= class_name.pluralize %>" do
-  describe "GET /<%= table_name %>" do
-    it "works! (now write some real specs)" do
-<% if webrat? -%>
-      visit <%= index_helper %>_path
-<% else -%>
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get <%= index_helper %>_path
-<% end -%>
-      response.status.should be(200)
+describe "<%= class_name.pluralize %>", :request => true do
+  context "When I'm viewing the <%= class_name %> index page" do
+    it "I should see something" do
+      pending
     end
   end
 end
