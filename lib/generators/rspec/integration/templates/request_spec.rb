@@ -6,7 +6,7 @@ describe "Manage <%= class_name.pluralize %>", :type => :request do
   end
   context "When I am viewing the <%= class_name.pluralize %> index page" do
     before(:each) do
-      @<%= class_name.downcase.to_sym %> = Factory.create(<%= class_name.downcase.to_sym %>)
+      @<%= class_name.downcase.to_sym %> = Factory.create(:<%= class_name.downcase %>)
       visit "admin_<%= class_name.downcase %>s_path"
     end
     it "I should see a link to create a new <%= class_name.downcase %>" do
